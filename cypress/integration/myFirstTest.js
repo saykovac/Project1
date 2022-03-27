@@ -5,7 +5,7 @@ it('google test', function(){
     
     cy.visit('https://google.com')
 
-    cy.get('.gLFyf'/*,{timeout: 6000}*/).type('Bujaka Bujaka{enter}')
+    cy.get('.gLFyf'/*,{timeout: 6000}*/).type('The Jam - Going underground{enter}')
     // kopirali selektor
     // cy.get('[href="https://genius.com/The-jam-going-underground-lyrics"] > .LC20lb').click()
     cy.wait(4000)
