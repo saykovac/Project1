@@ -25,9 +25,11 @@ it.only('login test', function(){
     cy.get('#txtPassword').type('admin123')
     cy.get('#btnLogin').click()
     cy.get('#menu_admin_viewAdminModule > b').click()
-    cy.get('#menu_admin_UserManagement').trigger('#menu_admin_viewSystemUsers')
+    cy.get('#menu_admin_UserManagement').invoke('show')
+    // ovaj gore element je vidljiv ali kada se samo predje preko njega otvara se donji element na koji treba da se klikne
+    // sa invoke 'show' "probudima" gornji kao da je hover stanje i onda klikcemo na donji koji se pojavio
     cy.get('#menu_admin_viewSystemUsers').click()
-    // nadji nacin da bude hover stanje da bi se pokazao element iznad
+    
     
 
 })
